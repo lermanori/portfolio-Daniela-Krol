@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'vermin';
+    font-weight: 400;
+    src: url('~static/vermin.woff') format("woff");
+}
+@font-face {
+    font-family: 'agency';
+    font-weight: 400;
+    src: url('~static/agency.woff') format("woff");
+}
