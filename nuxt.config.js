@@ -1,3 +1,4 @@
+import axios from 'axios'
 export default {
   mode: 'universal',
   server: {
@@ -10,7 +11,15 @@ export default {
     base: '/protfolio-2020/'
   },
   generate: {
-    dir: "docs"
+    dir: "docs",
+    async routes(){
+      const {data:user} = await axios.get('http://localhost:3000/users/dani_krol');
+      const projects = user.projects.map(x=>`/category/${x.id}`)
+      const tags = user.projects.map(x=>x.tags).flat().map(x=>`/project/${x}`);
+      return [
+        ...projects,...tags
+      ]
+    }
   },
   head: {
     title: process.env.npm_package_name || '',
