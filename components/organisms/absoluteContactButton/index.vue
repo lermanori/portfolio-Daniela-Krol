@@ -68,7 +68,7 @@ export default Vue.extend({
   },
   methods: {
     async send_mail() {
-        const url ="http://localhost:3000/users/dani_krol/contact";
+        const url =process.env.BASE_URL + "/users/dani_krol/contact";
         const body = {
             name:this.contactName,
             mail:this.contactMail,

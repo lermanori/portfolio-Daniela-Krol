@@ -12,7 +12,7 @@ import homepage from '~/components/page/homepage/index.vue'
 import axios from 'axios' 
 export default Vue.extend({
   async  asyncData(){
-    const {data:user} = await axios.get('http://localhost:3000/users/dani_krol')
+    const {data:user} = await axios.get(`${process.env.BASE_URL}/users/dani_krol`)
     return {user};
   },
     data:()=>({
@@ -33,6 +33,9 @@ export default Vue.extend({
     absoluteContactButton,
     homepage
   },
+  created(){
+    console.log(`${process.env.BASE_URL}/users/dani_krol`)
+  }
 
 });
 </script>

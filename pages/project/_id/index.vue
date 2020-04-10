@@ -13,7 +13,7 @@ import absoluteContactButton from "~/components/organisms/absoluteContactButton/
 import absoluteBackButton from "~/components/organisms/absoluteBackButton/index.vue";
 export default Vue.extend({
   async asyncData({ params }) {
-    const url = `http://localhost:3000/users/dani_krol/tag/${params.id}/`;
+    const url = `${process.env.BASE_URL}/users/dani_krol/tag/${params.id}/`;
     const { data: project } = await axios.get(url);
     return { project };
   },

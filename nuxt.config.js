@@ -2,7 +2,7 @@ import axios from 'axios'
 export default {
   mode: 'universal',
   server: {
-    port: 8082
+    port: 8082,
   },
   /*
    ** Headers of the page
@@ -13,12 +13,18 @@ export default {
   generate: {
     dir: "docs",
     async routes(){
-      const {data:user} = await axios.get('http://localhost:3000/users/dani_krol');
-      const projects = user.projects.map(x=>`/category/${x.id}`)
-      const tags = user.projects.map(x=>x.tags).flat().map(x=>`/project/${x}`);
-      return [
-        ...projects,...tags
-      ]
+      try{
+        const {data:user} = await axios.get(`https://protfolio-api.herokuapp.com/users/dani_krol`);
+        console.log(user);
+        const projects = user.projects.map(x=>`/category/${x.id}`)
+        const tags = user.projects.map(x=>x.tags).flat().map(x=>`/project/${x}`);
+        return [
+          ...projects,...tags
+        ]
+      }
+      catch(err){
+        console.log(err);
+      }
     }
   },
   head: {
