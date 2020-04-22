@@ -1,6 +1,7 @@
 <template>
     <div class="bg-black">
-        <grid class="bg-green-400" :gridItems="gridItems" @clicked="handle_click"/>
+        <grid class="bg-green-400" :gridItems="gridItems" @clicked="handle_click" :home="home"/>
+        
     </div>
 </template>
 
@@ -9,7 +10,7 @@
     import grid from '~/components/molecules/grid/index.vue'
 
     export default Vue.extend({
-        props:['gridItems'],
+        props:['gridItems','home'],
         components:{
             grid,
         },

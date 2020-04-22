@@ -5,7 +5,7 @@
       v-if="!clicked"
       class="text-xl lg:text-4xl xl:text-5xl"
       :color="'green'"
-      :text="'lets talk'"
+      :text="'Hey! Lets Talk :)'"
     />
     <div class="relative border-2 border-green-400 pb-6" v-if="clicked">
       <div class="absolute top-0 ml-2 mt-2 h-6 w-6 cursor-pointer" @click="clicked=false">
@@ -16,7 +16,7 @@
           </g>
         </svg>
       </div>
-      <h1 class="text-white text-4xl font-agency text-center my-2">hey lets talk</h1>
+      <h1 class="text-white text-4xl font-agency text-center my-2">Hey! Lets Talk :)</h1>
       <div class="relative left-0 flex text-white justify-center">
         <div class="w-1/2 flex flex-col items-base mx-4">
           <input

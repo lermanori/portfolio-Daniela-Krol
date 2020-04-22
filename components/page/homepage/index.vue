@@ -1,8 +1,10 @@
 <template>
   <main>
     <open-section :name="name" />
-    <bio-section :bio="bio" />
-    <grid-skills-section :gridItems="gridItems"/>
+    <bio-section :bio="bio" :home="true" />
+    <grid-skills-section :gridItems="gridItems" :home="true">
+      
+    </grid-skills-section>
   </main>
 </template>
 

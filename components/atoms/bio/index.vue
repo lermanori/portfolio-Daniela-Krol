@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-green-400 text-3xl lg:text-5xl text-center font-agency"
+    :class="['text-green-400',home == true ?'text-3xl':'text-2xl',home == true ?'lg:text-5xl':'lg:text-4xl','text-center','font-agency']"
     :style="{textAlign:'center'}"
     v-html="bio"
   ></div>
@@ -10,7 +10,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  props: ["bio"]
+  props: ["bio", "home"]
 });
 </script>
 

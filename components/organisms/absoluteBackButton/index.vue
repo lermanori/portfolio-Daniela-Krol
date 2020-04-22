@@ -1,7 +1,7 @@
 <template>
   <div class="absolute top-0 left-0">
     <svg
-      @click="$router.push('/')"
+      @click="$router.go(-1)"
       class="mx-4 my-2 cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
