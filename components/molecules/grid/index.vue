@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-wrap">
         <gridItem class="cursor-pointer" v-for="item in gridItems" :key="item.id" :item="item" @clicked="handle_click" />
-        <a class="w-full" href="/protfolio-2020/dani-cv.jpg" style="decoration:none;display:inline-block" download>
+        <a class="w-full" href="/dani-cv.jpg" style="decoration:none;display:inline-block" download>
         <gridItem class="cursor-pointer" :key="'cv'" :item="{title:'cv'}"  v-if="home" />
         </a>
 </div>
