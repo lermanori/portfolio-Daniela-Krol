@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   router: {
-    // base: '/protfolio-2020/'
+    base: '/protfolio-2020/'
   },
   generate: {
     dir: "docs",
