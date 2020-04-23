@@ -1,7 +1,7 @@
 <template>
       <div class="flex flex-wrap justify-center m-2">
           <template v-for="img in gridItems">
-            <img v-if="img!== ''" :src="img" alt :key="img" class="w-full p-2 md:w-1/2 object-cover object-center" />
+            <img v-if="img!== ''" :src="img" alt :key="img" class="w-full p-2 md:w-1/2 object-contain object-center" />
           </template>
       </div>
 </template>
