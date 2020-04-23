@@ -3,7 +3,7 @@
     <!-- <categoryOpenSection :name="name" /> -->
     <div class="text-center">
       <titleApp :name="name" class="pt-12" />
-      <bioApp :bio="bio" class="py-4" />
+      <bioApp :bio="bio" class="md:py-4" />
       <imgGrid :gridItems="gridItems" />
     </div>
   </div>
