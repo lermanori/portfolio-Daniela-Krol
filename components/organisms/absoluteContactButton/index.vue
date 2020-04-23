@@ -1,5 +1,5 @@
 <template>
-  <div :class="['absolute', 'top-0', 'right-0',clicked ? 'w-3/5':'','bg-black','z-20']">
+  <div :class="['absolute', 'top-0', 'right-0',clicked ? 'sm:w-3/5 w-full':'','bg-black','z-20']">
     <my-btn
       @click="clicked=true"
       v-if="!clicked"
