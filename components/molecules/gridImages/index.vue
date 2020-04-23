@@ -1,5 +1,5 @@
 <template>
-      <div class="flex flex-wrap justify-center m-2">
+      <div class="flex flex-wrap justify-center m-2 max-h-screen">
           <template v-for="img in gridItems">
             <img v-if="img!== ''" :src="img" alt :key="img" class="h-auto w-full p-2 md:w-1/2 object-contain object-center" />
           </template>
