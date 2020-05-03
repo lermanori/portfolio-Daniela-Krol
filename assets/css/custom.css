@@ -2,9 +2,11 @@
     font-family: 'vermin';
     font-weight: 400;
     src: url('~static/vermin.woff') format("woff");
+    font-display: swap;
 }
 @font-face {
     font-family: 'agency';
     font-weight: 400;
     src: url('~static/agency.woff') format("woff");
+    font-display: swap;
 }
