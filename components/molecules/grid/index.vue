@@ -1,9 +1,9 @@
 <template>
 <div class="flex flex-wrap">
         <gridItem class="cursor-pointer" v-for="item in gridItems" :key="item.id" :item="item" @clicked="handle_click" />
-        <a class="w-full" href="https://lermanori.github.io/protfolio-2020/dani-cv.jpg" style="decoration:none;display:inline-block" download>
-        <gridItem class="cursor-pointer" :key="'cv'" :item="{title:'cv'}"  v-if="home" />
-        </a>
+        <gridItem class="cursor-pointer" :key="'cv'" :item="{title:'cv'}"  v-if="home" @clicked="handle_click_cv" />
+        <!-- <a  href="https://lermanori.github.io/protfolio-2020/dani-cv.jpg" style="decoration:none;display:inline-block" download>
+        </a> -->
 </div>
 </template>
 
@@ -22,6 +22,7 @@
             },
             handle_click_cv(item:any){
                 console.log("download cv");
+                window.open("https://lermanori.github.io/protfolio-2020/dani-cv.jpg")
             }
         }
    
