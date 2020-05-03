@@ -14,10 +14,10 @@ export default {
     dir: "docs",
     async routes(){
       try{
-        const {data:user} = await axios.get(`https://protfolio-api.herokuapp.com/users/dani_krol`);
-        console.log(user);
-        const projects = user.projects.map(x=>`/category/${x.id}`)
-        const tags = user.projects.map(x=>x.tags).flat().map(x=>`/project/${x}`);
+        // const {data:user} = await axios.get(`https://protfolio-api.herokuapp.com/users/dani_krol`);
+        const {data:userData} = await axios.get(`https://protfolio-api.herokuapp.com/users/full/dani_krol`);
+        const projects = userData.map(project=>({route:`/category/${project.id}`,payload:project}))
+        const tags = userData.map(x=>x.tags).flat().map(tag=>({tag:`/project/${tag.id}`,payload:tag}));
         return [
           ...projects,...tags
         ]
