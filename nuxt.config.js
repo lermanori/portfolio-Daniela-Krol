@@ -17,7 +17,8 @@ export default {
         // const {data:user} = await axios.get(`https://protfolio-api.herokuapp.com/users/dani_krol`);
         const {data:userData} = await axios.get(`https://protfolio-api.herokuapp.com/users/full/dani_krol`);
         const projects = userData.map(project=>({route:`/category/${project.id}`,payload:project}))
-        const tags = userData.map(x=>x.tags).flat().map(tag=>({tag:`/project/${tag.id}`,payload:tag}));
+        const tags = userData.map(x=>x.tags).flat().map(tag=>({route:`/project/${tag.id}`,payload:tag}));
+        console.log(tags);
         return [
           ...projects,...tags
         ]
