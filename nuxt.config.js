@@ -44,7 +44,12 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      }
+      },
+      {
+        hid: 'image',
+        name: 'image',
+        content: '/review.jpg' || ''
+      },
     ],
     link: [{
       rel: 'icon',
