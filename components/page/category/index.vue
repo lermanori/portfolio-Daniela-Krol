@@ -1,7 +1,7 @@
 <template>
   <div class="bg-black">
     <categoryOpenSection :name="name" />
-    <bioApp :bio="bio" class="py-4"/>
+    <!-- <bioApp :bio="bio" class="py-4"/> -->
     <gridSkillsSection :gridItems="gridItems"/>
   </div>
 </template>
