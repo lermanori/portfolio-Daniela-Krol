@@ -29,7 +29,7 @@ export default {
     }
   },
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Daniela Krol protfolio' || process.env.npm_package_name || '',
     htmlAttrs: {
       lang: 'en',
     },

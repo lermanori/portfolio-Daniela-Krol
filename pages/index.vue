@@ -34,7 +34,7 @@ export default Vue.extend({
     homepage
   },
   created(){
-    console.log(`${process.env.BASE_URL}/users/dani_krol`)
+    // console.log(`${process.env.BASE_URL}/users/dani_krol`)
   }
 
 });

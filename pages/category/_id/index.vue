@@ -16,9 +16,12 @@ import absoluteBackButton from "~/components/organisms/absoluteBackButton/index.
     export default Vue.extend({
         async asyncData({params, payload}){
             if (payload) return { project: payload }
-            const url = `${process.env.BASE_URL}/users/dani_krol/${params.id}`
+            else{
+
+                const url = `${process.env.BASE_URL}/users/dani_krol/${params.id}`
             const {data:project} =await axios.get(url);
             return {project};
+            }
         },
         components:{
             categoryPage,
