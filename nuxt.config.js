@@ -18,9 +18,10 @@ export default {
         const {data:userData} = await axios.get(`https://protfolio-api.herokuapp.com/users/full/dani_krol`);
         const projects = userData.map(project=>({route:`/category/${project.id}`,payload:project}))
         const tags = userData.map(x=>x.tags).flat().map(tag=>({route:`/project/${tag.id}`,payload:tag}));
-        console.log(tags);
+        const {data:user} = await axios.get(`https://protfolio-api.herokuapp.com/users/dani_krol`)
+        const index = { route:'/',payload:user}
         return [
-          ...projects,...tags
+          ...projects,...tags,index
         ]
       }
       catch(err){
@@ -80,10 +81,10 @@ export default {
     '@nuxtjs/tailwindcss',
     ['@nuxtjs/google-analytics', {
       id: 'UA-165564184-1',
-      debug: {
-        enabled: true,
-        sendHitTask: true
-      }
+      // debug: {
+      //   enabled: true,
+      //   sendHitTask: true
+      // }
     }]
   ],
   /*
