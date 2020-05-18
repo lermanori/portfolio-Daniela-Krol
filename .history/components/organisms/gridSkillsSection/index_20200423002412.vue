@@ -17,8 +17,7 @@
         methods:{
             handle_click(item:{id:string}){
                 const route = `/category/${item.id}` 
-                // this.$router.push(route);
-                window.location.href = route;
+                this.$router.push(route);
                 // console.log(route);
             }
         }
