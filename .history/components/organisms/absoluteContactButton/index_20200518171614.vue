@@ -46,9 +46,9 @@
       <div class="flex justify-end mr-4">
         <button @click="send_mail" class="bg-green-400 text-xl text-white px-3 py-1">send</button>
       </div>
-      <emailAnimation class="text-white h-full w-64 mx-auto" :state.sync="Email_state">
-        <template v-slot:loading_text><h1 class="text-white font-agency text-center text-2xl">sending Your Email...</h1></template>
-        <template v-slot:done_text><h1 class="text-white font-agency text-center text-2xl">Thank You For Reaching Out.</h1></template>
+      <emailAnimation class="text-white h-full w-64" :state.sync="Email_state">
+        <template v-slot:loading_text><h1 class="text-white text-center text-2xl">sending Your Email...</h1></template>
+        <template v-slot:done_text><h1 class="text-white text-center text-2xl">Thank You For Reaching Out.</h1></template>
       </emailAnimation>
     </div>
   </div>

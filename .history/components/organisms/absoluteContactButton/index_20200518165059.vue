@@ -46,10 +46,6 @@
       <div class="flex justify-end mr-4">
         <button @click="send_mail" class="bg-green-400 text-xl text-white px-3 py-1">send</button>
       </div>
-      <emailAnimation class="text-white h-full w-64 mx-auto" :state.sync="Email_state">
-        <template v-slot:loading_text><h1 class="text-white font-agency text-center text-2xl">sending Your Email...</h1></template>
-        <template v-slot:done_text><h1 class="text-white font-agency text-center text-2xl">Thank You For Reaching Out.</h1></template>
-      </emailAnimation>
     </div>
   </div>
 </template>
@@ -66,14 +62,8 @@ export default Vue.extend({
     contactName: "",
     contactMail: "",
     contactPhone: "",
-    contactMessage: "",
-    email_state:"not-active"
+    contactMessage: ""
   }),
-  computed:{
-    Email_state(){
-      return this.email_state;
-    }
-  },
   components: {
     myBtn,
     emailAnimation
@@ -87,10 +77,8 @@ export default Vue.extend({
             phone:this.contactPhone,
             body:this.contactMessage,
         }
-        this.email_state = 'loading'
         const res = await axios.post(url,body);
-        this.email_state = 'done';
-        setTimeout(()=>this.clicked = false,2000)
+        this.clicked = false;
     }
   }
 });
