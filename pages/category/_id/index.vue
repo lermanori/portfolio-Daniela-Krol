@@ -18,9 +18,9 @@ import absoluteBackButton from "~/components/organisms/absoluteBackButton/index.
             if (payload) return { project: payload }
             else{
 
-                const url = `${process.env.BASE_URL}/users/dani_krol/${params.id}`
-            const {data:project} =await axios.get(url);
-            return {project};
+            //     const url = `${process.env.BASE_URL}/users/dani_krol/${params.id}`
+            // const {data:project} =await axios.get(url);
+            // return {project};
             }
         },
         components:{

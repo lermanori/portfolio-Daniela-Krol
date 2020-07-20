@@ -14,10 +14,10 @@ export default Vue.extend({
   async asyncData({ payload }) {
     if (payload) return { user: payload };
     else {
-      const { data: user } = await axios.get(
-        `${process.env.BASE_URL}/users/dani_krol`
-      );
-      return { user };
+      // const { data: user } = await axios.get(
+      //   `${process.env.BASE_URL}/users/dani_krol`
+      // );
+      // return { user };
     }
   },
   data: () => ({
